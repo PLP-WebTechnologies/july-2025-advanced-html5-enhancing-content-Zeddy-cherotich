@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enhanced Form Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header, nav, main, footer {
+      padding: 1em;
+      margin: 0 auto;
+      max-width: 960px;
+    }
+    header {
+      background-color: #333;
+      color: white;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1em;
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+    }
+    form {
+      background: white;
+      padding: 1em;
+      margin-top: 1em;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin: 0.5em 0 0.2em;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-bottom: 1em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+    th, td {
+      padding: 0.5em;
+      text-align: left;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 2em;
+    }
+    .media {
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Enhanced HTML5 Form Page</h1>
+    <p>Demonstrating structured content and form validation.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#form">Form</a></li>
+      <li><a href="#info">Info</a></li>
+      <li><a href="#media">Media</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="form">
+      <h2>User Registration Form</h2>
+      <form action="/submit" method="POST" autocomplete="on" novalidate>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6" />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required />
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="">Choose a country</option>
+          <option value="us">United States</option>
+          <option value="ca">Canada</option>
+          <option value="uk">United Kingdom</option>
+        </select>
+
+        <label for="bio">Short Bio:</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+
+        <label for="newsletter">
+          <input type="checkbox" id="newsletter" name="newsletter" />
+          Subscribe to newsletter
+        </label>
+
+        <label>Gender:</label>
+        <label><input type="radio" name="gender" value="male" required /> Male</label>
+        <label><input type="radio" name="gender" value="female" /> Female</label>
+        <label><input type="radio" name="gender" value="other" /> Other</label>
+
+        <label for="readonlyField">Read-Only Field:</label>
+        <input type="text" id="readonlyField" value="This is read-only" readonly />
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <section id="info">
+      <h2>Why We Collect This Info</h2>
+      <ul>
+        <li>To provide personalized experiences</li>
+        <li>To send updates and newsletters</li>
+        <li>To improve our services</li>
+      </ul>
+
+      <h3>Sample Data Table</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Example</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Full Name</td>
+            <td>Jane Doe</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>jane@example.com</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Country</td>
+            <td>United States</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="media" class="media">
+      <h2>Learn More About Us</h2>
+      <p>Watch this short introduction video:</p>
+      <video width="100%" controls>
+        <source src="sample-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <p>Listen to our welcome message:</p>
+      <audio controls>
+        <source src="sample-audio.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enhanced Form Inc. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
